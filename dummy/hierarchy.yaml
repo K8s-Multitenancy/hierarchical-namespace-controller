@@ -1,0 +1,15 @@
+apiVersion: hnc.x-k8s.io/v1alpha2
+kind: HierarchyConfiguration
+metadata:
+  name: hierarchy
+  namespace: tenant-a
+spec:
+  parent: tenants
+---
+apiVersion: hnc.x-k8s.io/v1alpha2
+kind: HierarchyConfiguration
+metadata:
+  name: hierarchy
+  namespace: tenant-b
+spec:
+  parent: tenants
