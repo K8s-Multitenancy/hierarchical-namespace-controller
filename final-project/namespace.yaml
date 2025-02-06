@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: root-namespace
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-admin
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-tenant-x
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-tenant-y
+---
+
+---
+# Run the command below in terminal to set the parent namespaces
+# kubectl hns set namespace-admin --parent=root-namespace
+# kubectl hns set namespace-tenant-x --parent=root-namespace
+# kubectl hns set namespace-tenant-y --parent=root-namespace
